@@ -1,0 +1,93 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+:root {
+
+
+    --background-color:rgb(190, 173, 173);
+
+    --button-color: pink;
+    --button-radius: 50px;
+    --button-font-family: 'Open Sans', sans-serif;
+    --button-font-size: 25px;
+    --button-link-color: black;
+	--button-link-color-hover: blue;
+    --button-height: auto;
+    --button-width: auto;
+
+    --menu-item-color:grey;
+
+    --header-font-size: var(--button-font-size);
+    --header-background: rgb(179, 179, 179);
+
+	--spacer: 1rem;
+	--spacer-half: calc(var(--spacer) / 2);
+
+}
+
+.header{
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+
+}
+
+.button, .button__link{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 30px; 
+    line-height: 25px;
+    border-radius: 4px;
+    display:flex;
+}
+
+.header__title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header__right {
+    float: right;
+}
+
+.menu{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.menu__item, .button__link{
+    margin-left: 0px;
+}
+.header__title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header__title:hover, .header__link:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header__title.active, .header__link.active {
+    background-color: var(--background-color);
+    color: white;
+}
+
+.header-right {
+    float: right;   
+}
+
+@media screen and (max-width: 500px) {
+    .button, .button__link{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header__right {
+        float: none;
+    }
+}

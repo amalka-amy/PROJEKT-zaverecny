@@ -3,12 +3,71 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Pokus </title>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway&display=swap" rel="stylesheet">
+	<title> {{title}}</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/css/header.css">
+	<link rel="stylesheet" href="/css/footer.css">
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	{{content | safe}}
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__left>
+                <img class="header__logo" src="/images/logo.png" alt="logo">
+
+                <div class="header__title">
+                    <a> Nika makeup art</a>
+                </div>
+            </div>
+
+            <nav class="header__right">
+                    <ul class="menu">
+                        <li class="button menu__item button_uvod"><a href="/" class="button__link menu__link">Úvod</a></li>
+                        <li class="button menu__item button_omne"><a href="/omne" class="button__link menu__link">O mně</a></li>
+                        <li class="button menu__item button_sluzby"><a href="/sluzby" class="button__link menu__link">Služby</a></li>
+                        <li class="button menu__item button_galerie"><a href="/galerie" class="button__link menu__link">Galerie</a></li>
+                        <li class="button menu__item button_kontakt"><a href="#kontakt" class="button__link menu__link">Kontakt</a></li>
+                    </ul>
+            </nav>
+        </div>
+
+		<main class="main">
+            {{content | safe}}
+        </main>
+
+		<footer class="footer" id="kontakt">
+            <div class="footer__top">
+                <div class="footer__top_left footer__centered">
+                    <h2>Kontakt</h2>  
+                </div>
+
+                <div class="footer__top_right footer__centered">
+                    <div class="footer__right_items">
+                        <p>
+                            <span class="footer__title">IG: </span>
+                            NIKA_MAKEUP_ART
+                        </p>
+                        <p>
+                            <span class="footer__title">FB: </span>
+                            NIKA MAKEUP ART
+                        </p>
+                        <p>
+                            <span class="footer__title">Tel: </span>
+                            +420 702 031 186
+                        </p>
+                        <p>
+                            <span class="footer__title">E-mail: </span>
+                            <a class="footer__item" href="mailto:nikakoutnikova@gmail.com">nikakoutnikova@gmail.com</a>
+                        </p>
+                    </div>
+                    </div>
+            </div>
+			<div class="footer__bottom footer__centered">
+				NIKA MAKEUP ART 2022
+			</div>
+		</footer>
+
+
+	</div><!-- .wrapper -->
 </body>
 </html>
