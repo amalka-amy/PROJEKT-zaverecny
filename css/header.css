@@ -4,21 +4,20 @@ html { box-sizing: border-box; }
 :root {
 
 
-    --background-color:rgb(190, 173, 173);
+    --background-color:#bacec1;
 
     --button-color: pink;
     --button-radius: 50px;
-    --button-font-family: 'Open Sans', sans-serif;
     --button-font-size: 25px;
     --button-link-color: black;
 	--button-link-color-hover: blue;
     --button-height: auto;
     --button-width: auto;
 
-    --menu-item-color:grey;
-
     --header-font-size: var(--button-font-size);
-    --header-background: rgb(179, 179, 179);
+    --header-background: #f6f4e8;
+    --background-color-hover: #e59560;
+    --background-color-button: #1d3124;
 
 	--spacer: 1rem;
 	--spacer-half: calc(var(--spacer) / 2);
@@ -27,9 +26,12 @@ html { box-sizing: border-box; }
 
 .header{
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: var(--header-background);
     padding: 5px 10px;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
 }
 
 .button, .button__link{
@@ -44,6 +46,11 @@ html { box-sizing: border-box; }
     display:flex;
 }
 
+.menu__item:hover{
+    background-color: var(--background-color-hover);
+}
+
+
 .header__title {
     font-size: 25px;
     font-weight: bold;
@@ -56,6 +63,7 @@ html { box-sizing: border-box; }
 .menu{
     list-style: none;
     padding-left: 0px;
+    margin: 0px;
 }
 
 .menu__item, .button__link{
@@ -66,21 +74,15 @@ html { box-sizing: border-box; }
     font-weight: bold;
 }
 
-.header__title:hover, .header__link:hover {
-    background-color: #ddd;
-    color: black;
-}
-
 .header__title.active, .header__link.active {
-    background-color: var(--background-color);
-    color: white;
+    background-color: var(--background-color-hover);
 }
 
 .header-right {
     float: right;   
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1100px) {
     .button, .button__link{
         float: none;
         display: block;
@@ -89,5 +91,9 @@ html { box-sizing: border-box; }
 
     .header__right {
         float: none;
+    }
+
+    .header{
+        flex-direction: column;
     }
 }

@@ -17,6 +17,16 @@ body{
     margin:0px;
 }
 
+h2, h1{
+    margin:5px 0px;
+    font-family: 'Ranga', cursive;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0 0 0;
+    
+}
+
 .center__h{
     margin-left: auto;
     margin-right: auto;
@@ -54,10 +64,15 @@ section{
     display: inline-block;
     --button-height: 50px;
     --button-width: 150px;
+    
+}
+.button__link{
+    text-align: center;
 }
 
 .button__link_basic{
-    background-color: red;
+    background-color: var(--background-color-button);
+    color:var(--background-color);
     padding: 15px;
     border-radius: 20px;
 }
@@ -80,14 +95,14 @@ section{
 
 }
 
-.first__uvod{
+.first__uvod, .first__omne{
     display: flex;
     justify-content: space-between;
     width: 1000px;
     
 }
 
-.first__uvod_right{
+.first__uvod_right, .first__omne_right{
     width: 450px;
     display: flex;
     flex-direction: column;
@@ -116,10 +131,12 @@ section{
 .grid{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 250px 250px;
     padding: 20px;
 }
-
+.first__omne_right_top{
+    margin: 0px;
+}
 .first__omne_left{
     grid-column: 1/2;
     grid-row:1/3;
@@ -175,13 +192,52 @@ a{
     font-size: 40px;
 }
 
+.footer__item{
+    padding: 10px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
 
-    
-@media screen and (max-width:650px){
+.galerie{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+
+.galerie__image{
+    width: calc(1100px/3);
+    height: calc(1100px/2) ;
+    object-fit: cover;
+}
+
+.sluzba{
+    padding:20px;
+    border-radius: 40px;
+    background-color: var(--background-color-button);
+    color: var(--background-color);
+    text-align: center;
+}
+.sluzba__title{
+    font-size: 30px;
+}
+
+.nabidka__sluzby{
+    padding:20px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+@media screen and (max-width:1100px){
 
     :root{
         --image-big:100vw;
         --max-width: 400px;
+    }
+    section{
+        padding:10px 0px;
     }
     .title{
         text-align: center;
@@ -216,6 +272,7 @@ a{
         display:flex;
         flex-direction: column;
         padding:0px;
+
     }
 
     p{
@@ -223,16 +280,15 @@ a{
     }
 
     .nabidka__sluzby{
+        display:flex;
         flex-direction: column;
+        justify-content: center;
     }
 
-    .nabidka__sluzby_left_center{
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    .galerie__image{
+        width: 100vw;
+        height: 100vw ;
+        object-fit: cover;
     }
-
-    .nabidka__sluzby_right{
-        height: var(--image-small-width);
-        width: 100vw
-    }
+    
 }
