@@ -2,7 +2,7 @@ html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 
 :root{
-    --font:'Spectral', serif;
+    --font:'Segoe UI', Roboto;
 
 
     --image-big: 500px;
@@ -23,7 +23,7 @@ body{
 h2{
     margin:5px 0px;
     font-family: var(--font);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
     text-align: center;
     padding: 20px 0 0 0;
@@ -196,7 +196,7 @@ section{
 
 p{
     font-family: var(--font);
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
     font-size: 20px;
 }
